@@ -1,0 +1,229 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{B85FFE63-9D60-4721-8DD0-3DD72094F1E4}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>DocuSign.eSign</RootNamespace>
+    <AssemblyName>DocuSign.eSign</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>true</SignAssembly>
+  </PropertyGroup>
+  <PropertyGroup>
+    <AssemblyOriginatorKeyFile>key.snk</AssemblyOriginatorKeyFile>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Newtonsoft.Json, Version=8.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>packages\Newtonsoft.Json.8.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="RestSharp, Version=100.0.0.0, Culture=neutral, PublicKeyToken=598062e77f915f75, processorArchitecture=MSIL">
+      <HintPath>packages\RestSharpSigned.105.2.3\lib\net45\RestSharp.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Api\AccountsApi.cs" />
+    <Compile Include="Api\AuthenticationApi.cs" />
+    <Compile Include="Api\CustomTabsApi.cs" />
+    <Compile Include="Api\DiagnosticsApi.cs" />
+    <Compile Include="Api\EnvelopesApi.cs" />
+    <Compile Include="Api\FoldersApi.cs" />
+    <Compile Include="Api\TemplatesApi.cs" />
+    <Compile Include="Api\UsersApi.cs" />
+    <Compile Include="Client\ApiClient.cs" />
+    <Compile Include="Client\ApiException.cs" />
+    <Compile Include="Client\ApiResponse.cs" />
+    <Compile Include="Client\Configuration.cs" />
+    <Compile Include="Model\AccountInformation.cs" />
+    <Compile Include="Model\AccountSettingsInformation.cs" />
+    <Compile Include="Model\AccountSharedAccess.cs" />
+    <Compile Include="Model\AddressInformation.cs" />
+    <Compile Include="Model\AddressInformationInput.cs" />
+    <Compile Include="Model\Agent.cs" />
+    <Compile Include="Model\ApiRequestLog.cs" />
+    <Compile Include="Model\ApiRequestLogsResult.cs" />
+    <Compile Include="Model\Approve.cs" />
+    <Compile Include="Model\Attachment.cs" />
+    <Compile Include="Model\AuthenticationStatus.cs" />
+    <Compile Include="Model\BccEmailAddress.cs" />
+    <Compile Include="Model\BulkEnvelope.cs" />
+    <Compile Include="Model\BulkEnvelopeStatus.cs" />
+    <Compile Include="Model\CarbonCopy.cs" />
+    <Compile Include="Model\CertifiedDelivery.cs" />
+    <Compile Include="Model\Checkbox.cs" />
+    <Compile Include="Model\Company.cs" />
+    <Compile Include="Model\CompositeTemplate.cs" />
+    <Compile Include="Model\ConsoleViewRequest.cs" />
+    <Compile Include="Model\CorrectViewRequest.cs" />
+    <Compile Include="Model\CustomFields.cs" />
+    <Compile Include="Model\CustomFieldsEnvelope.cs" />
+    <Compile Include="Model\CustomFieldV2.cs" />
+    <Compile Include="Model\Date.cs" />
+    <Compile Include="Model\DateSigned.cs" />
+    <Compile Include="Model\Decline.cs" />
+    <Compile Include="Model\DiagnosticsSettingsInformation.cs" />
+    <Compile Include="Model\DobInformationInput.cs" />
+    <Compile Include="Model\Document.cs" />
+    <Compile Include="Model\DocumentFieldsInformation.cs" />
+    <Compile Include="Model\DocumentTemplate.cs" />
+    <Compile Include="Model\DocumentTemplateList.cs" />
+    <Compile Include="Model\Editor.cs" />
+    <Compile Include="Model\Email.cs" />
+    <Compile Include="Model\EmailAddress.cs" />
+    <Compile Include="Model\EmailSettings.cs" />
+    <Compile Include="Model\Envelope.cs" />
+    <Compile Include="Model\EnvelopeAuditEvent.cs" />
+    <Compile Include="Model\EnvelopeAuditEventResponse.cs" />
+    <Compile Include="Model\EnvelopeDefinition.cs" />
+    <Compile Include="Model\EnvelopeDocument.cs" />
+    <Compile Include="Model\EnvelopeDocumentsResult.cs" />
+    <Compile Include="Model\EnvelopeEvent.cs" />
+    <Compile Include="Model\EnvelopeId.cs" />
+    <Compile Include="Model\EnvelopeIdsRequest.cs" />
+    <Compile Include="Model\EnvelopesInformation.cs" />
+    <Compile Include="Model\EnvelopeSummary.cs" />
+    <Compile Include="Model\EnvelopeTemplate.cs" />
+    <Compile Include="Model\EnvelopeTemplateDefinition.cs" />
+    <Compile Include="Model\EnvelopeTemplateResult.cs" />
+    <Compile Include="Model\EnvelopeTemplateResults.cs" />
+    <Compile Include="Model\EnvelopeTransactionStatus.cs" />
+    <Compile Include="Model\EnvelopeUpdateSummary.cs" />
+    <Compile Include="Model\ErrorDetails.cs" />
+    <Compile Include="Model\EventNotification.cs" />
+    <Compile Include="Model\EventResult.cs" />
+    <Compile Include="Model\Expirations.cs" />
+    <Compile Include="Model\FileType.cs" />
+    <Compile Include="Model\FileTypeList.cs" />
+    <Compile Include="Model\Filter.cs" />
+    <Compile Include="Model\FirstName.cs" />
+    <Compile Include="Model\Folder.cs" />
+    <Compile Include="Model\FolderItem.cs" />
+    <Compile Include="Model\FolderItemResponse.cs" />
+    <Compile Include="Model\FolderItemsResponse.cs" />
+    <Compile Include="Model\FolderItemV2.cs" />
+    <Compile Include="Model\FoldersRequest.cs" />
+    <Compile Include="Model\FoldersResponse.cs" />
+    <Compile Include="Model\FormulaTab.cs" />
+    <Compile Include="Model\FullName.cs" />
+    <Compile Include="Model\Group.cs" />
+    <Compile Include="Model\GroupInformation.cs" />
+    <Compile Include="Model\IdCheckInformationInput.cs" />
+    <Compile Include="Model\InitialHere.cs" />
+    <Compile Include="Model\InlineTemplate.cs" />
+    <Compile Include="Model\InPersonSigner.cs" />
+    <Compile Include="Model\Intermediary.cs" />
+    <Compile Include="Model\LastName.cs" />
+    <Compile Include="Model\List.cs" />
+    <Compile Include="Model\ListCustomField.cs" />
+    <Compile Include="Model\ListItem.cs" />
+    <Compile Include="Model\LockInformation.cs" />
+    <Compile Include="Model\LockRequest.cs" />
+    <Compile Include="Model\LoginAccount.cs" />
+    <Compile Include="Model\LoginInformation.cs" />
+    <Compile Include="Model\MatchBox.cs" />
+    <Compile Include="Model\MemberSharedItems.cs" />
+    <Compile Include="Model\MergeField.cs" />
+    <Compile Include="Model\NameValue.cs" />
+    <Compile Include="Model\Note.cs" />
+    <Compile Include="Model\Notification.cs" />
+    <Compile Include="Model\Number.cs" />
+    <Compile Include="Model\OfflineAttributes.cs" />
+    <Compile Include="Model\PageRequest.cs" />
+    <Compile Include="Model\Radio.cs" />
+    <Compile Include="Model\RadioGroup.cs" />
+    <Compile Include="Model\RecipientEmailNotification.cs" />
+    <Compile Include="Model\RecipientEvent.cs" />
+    <Compile Include="Model\RecipientPhoneAuthentication.cs" />
+    <Compile Include="Model\Recipients.cs" />
+    <Compile Include="Model\RecipientSAMLAuthentication.cs" />
+    <Compile Include="Model\RecipientSignatureInformation.cs" />
+    <Compile Include="Model\RecipientSMSAuthentication.cs" />
+    <Compile Include="Model\RecipientsUpdateSummary.cs" />
+    <Compile Include="Model\RecipientUpdateResponse.cs" />
+    <Compile Include="Model\RecipientViewRequest.cs" />
+    <Compile Include="Model\Reminders.cs" />
+    <Compile Include="Model\ResourceInformation.cs" />
+    <Compile Include="Model\ReturnUrlRequest.cs" />
+    <Compile Include="Model\SamlAssertionAttribute.cs" />
+    <Compile Include="Model\SenderEmailNotifications.cs" />
+    <Compile Include="Model\ServerTemplate.cs" />
+    <Compile Include="Model\ServiceInformation.cs" />
+    <Compile Include="Model\ServiceVersion.cs" />
+    <Compile Include="Model\SharedItem.cs" />
+    <Compile Include="Model\Signer.cs" />
+    <Compile Include="Model\SignerAttachment.cs" />
+    <Compile Include="Model\SignerEmailNotifications.cs" />
+    <Compile Include="Model\SignHere.cs" />
+    <Compile Include="Model\SocialAuthentication.cs" />
+    <Compile Include="Model\Ssn.cs" />
+    <Compile Include="Model\Ssn4InformationInput.cs" />
+    <Compile Include="Model\Ssn9InformationInput.cs" />
+    <Compile Include="Model\TabMetadata.cs" />
+    <Compile Include="Model\TabMetadataList.cs" />
+    <Compile Include="Model\Tabs.cs" />
+    <Compile Include="Model\TemplateCustomFields.cs" />
+    <Compile Include="Model\TemplateDocumentsResult.cs" />
+    <Compile Include="Model\TemplateInformation.cs" />
+    <Compile Include="Model\TemplateMatch.cs" />
+    <Compile Include="Model\TemplateNotificationRequest.cs" />
+    <Compile Include="Model\TemplateRecipients.cs" />
+    <Compile Include="Model\TemplateRole.cs" />
+    <Compile Include="Model\TemplateSummary.cs" />
+    <Compile Include="Model\TemplateTabs.cs" />
+    <Compile Include="Model\TemplateUpdateSummary.cs" />
+    <Compile Include="Model\Text.cs" />
+    <Compile Include="Model\TextCustomField.cs" />
+    <Compile Include="Model\Title.cs" />
+    <Compile Include="Model\UserInfo.cs" />
+    <Compile Include="Model\UserSettingsInformation.cs" />
+    <Compile Include="Model\ViewLinkRequest.cs" />
+    <Compile Include="Model\ViewUrl.cs" />
+    <Compile Include="Model\Zip.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="key.snk" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
