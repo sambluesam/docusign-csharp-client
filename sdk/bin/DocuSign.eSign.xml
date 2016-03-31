@@ -5415,17 +5415,7 @@
             Represents a collection of functions to interact with the API endpoints
             </summary>
         </member>
-        <member name="M:DocuSign.eSign.Api.ITemplatesApi.ListTemplates(System.String)">
-            <summary>
-            Gets the definition of a template.
-            </summary>
-            <remarks>
-            Retrieves the list of templates for the specified account. The request can be limited to a specific folder.
-            </remarks>
-            <param name="accountId">The external account number (int) or account ID Guid.</param>
-             <returns>1EnvelopeTemplateResults</returns>
-        </member>
-        <member name="M:DocuSign.eSign.Api.ITemplatesApi.ListTemplatesWithHttpInfo(System.String)">
+        <member name="M:DocuSign.eSign.Api.ITemplatesApi.ListTemplates(System.String,System.String)">
              <summary>
              Gets the definition of a template.
              </summary>
@@ -5433,9 +5423,21 @@
              Retrieves the list of templates for the specified account. The request can be limited to a specific folder.
              </remarks>
             <param name="accountId">The external account number (int) or account ID Guid.</param>
+            <param name="folderId">The optional folder Id</param>
+            <returns>1EnvelopeTemplateResults</returns>
+        </member>
+        <member name="M:DocuSign.eSign.Api.ITemplatesApi.ListTemplatesWithHttpInfo(System.String,System.String)">
+             <summary>
+             Gets the definition of a template.
+             </summary>
+             <remarks>
+             Retrieves the list of templates for the specified account. The request can be limited to a specific folder.
+             </remarks>
+            <param name="accountId">The external account number (int) or account ID Guid.</param>
+             <param name="folderId">The optional folder Id</param>
              <returns>2ApiResponse of EnvelopeTemplateResults</returns>
         </member>
-        <member name="M:DocuSign.eSign.Api.ITemplatesApi.ListTemplatesAsync(System.String)">
+        <member name="M:DocuSign.eSign.Api.ITemplatesApi.ListTemplatesAsync(System.String,System.String)">
              <summary>
              Gets the definition of a template.
              </summary>
@@ -5443,9 +5445,10 @@
              Retrieves the list of templates for the specified account. The request can be limited to a specific folder.
              </remarks>
             <param name="accountId">The external account number (int) or account ID Guid.</param>
+             <param name="folderId">The optional folder Id</param>
              <returns>3Task of EnvelopeTemplateResults</returns>
         </member>
-        <member name="M:DocuSign.eSign.Api.ITemplatesApi.ListTemplatesAsyncWithHttpInfo(System.String)">
+        <member name="M:DocuSign.eSign.Api.ITemplatesApi.ListTemplatesAsyncWithHttpInfo(System.String,System.String)">
              <summary>
              Gets the definition of a template.
              </summary>
@@ -5453,6 +5456,7 @@
              Retrieves the list of templates for the specified account. The request can be limited to a specific folder.
              </remarks>
             <param name="accountId">The external account number (int) or account ID Guid.</param>
+             <param name="folderId">The optional folder Id</param>
              <returns>4Task of ApiResponse (EnvelopeTemplateResults)</returns>
         </member>
         <member name="M:DocuSign.eSign.Api.ITemplatesApi.CreateTemplate(System.String,DocuSign.eSign.Model.EnvelopeTemplate)">
@@ -6706,32 +6710,36 @@
             <param name="value">Header field value.</param>
             <returns></returns>
         </member>
-        <member name="M:DocuSign.eSign.Api.TemplatesApi.ListTemplates(System.String)">
+        <member name="M:DocuSign.eSign.Api.TemplatesApi.ListTemplates(System.String,System.String)">
              <summary>
              Gets the definition of a template. Retrieves the list of templates for the specified account. The request can be limited to a specific folder.
              </summary>
             <param name="accountId">The external account number (int) or account ID Guid.</param>
+             <param name="folderId">The optional folder Id</param>
              <returns>5EnvelopeTemplateResults</returns>
         </member>
-        <member name="M:DocuSign.eSign.Api.TemplatesApi.ListTemplatesWithHttpInfo(System.String)">
+        <member name="M:DocuSign.eSign.Api.TemplatesApi.ListTemplatesWithHttpInfo(System.String,System.String)">
              <summary>
              Gets the definition of a template. Retrieves the list of templates for the specified account. The request can be limited to a specific folder.
              </summary>
             <param name="accountId">The external account number (int) or account ID Guid.</param>
+             <param name="folderId">The optional folder Id</param>
              <returns>6ApiResponse of EnvelopeTemplateResults</returns>
         </member>
-        <member name="M:DocuSign.eSign.Api.TemplatesApi.ListTemplatesAsync(System.String)">
+        <member name="M:DocuSign.eSign.Api.TemplatesApi.ListTemplatesAsync(System.String,System.String)">
              <summary>
              Gets the definition of a template. Retrieves the list of templates for the specified account. The request can be limited to a specific folder.
              </summary>
             <param name="accountId">The external account number (int) or account ID Guid.</param>
+             <param name="folderId">The optional folder Id</param>
              <returns>7Task of EnvelopeTemplateResults</returns>
         </member>
-        <member name="M:DocuSign.eSign.Api.TemplatesApi.ListTemplatesAsyncWithHttpInfo(System.String)">
+        <member name="M:DocuSign.eSign.Api.TemplatesApi.ListTemplatesAsyncWithHttpInfo(System.String,System.String)">
              <summary>
              Gets the definition of a template. Retrieves the list of templates for the specified account. The request can be limited to a specific folder.
              </summary>
             <param name="accountId">The external account number (int) or account ID Guid.</param>
+             <param name="folderId">The optional folder Id</param>
              <returns>8Task of ApiResponse (EnvelopeTemplateResults)</returns>
         </member>
         <member name="M:DocuSign.eSign.Api.TemplatesApi.CreateTemplate(System.String,DocuSign.eSign.Model.EnvelopeTemplate)">
